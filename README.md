@@ -1,2 +1,8 @@
 # spanish_accent_trainer
-This application allows the user to record whatever they would like, receive feedback, and be able to train their accents in a gamified practice mode.
+This application allows the user to record whatever they would like, receive feedback, and train their accents in a gamified practice mode.
+
+To make this project work, I started by using main.py as the central hub for using the app's backend. It works by having the user record audio, transcribing it, and from there creating a TextGrid file. The TextGrid file shows when and how you use specific phonemes. I use the phonomenize function on the transcription to see the phonemes that should've been said, and compare that with what the TextGrid shows after putting it through the Montreal Forced Aligner (MFA). 
+
+After it observes all of the differences between what should've been said versus what actually was said, it provides a counter array of close misses and far misses, determined by the phonetic difference between the phonemes. From there, it suggests words from your vocabulary that you should practice. The gamified_training.py file is outdated, and on the actual app, I use a slightly different system. I hid the consonant bars that measure impact, hiss, and smoothness, and replaced them with a diagram that makes it more intuitive for learners to use. 
+
+Some limitations of this project are that the MFA takes too long to run, even for simple sentences. This can take around one to two minutes, even for singular sentences. Also, the way I compare what a native would say versus what actually was said doesn't compare words, but rather looks at the entire sentence. This is because, in the MFA aligner, it doesn't always provide a space after a word, only after a pause, so the only solution was to remove all of the spaces entirely. This prevents the user from actually knowing what word they got incorrectly. 
