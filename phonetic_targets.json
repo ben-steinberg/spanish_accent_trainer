@@ -1,0 +1,25 @@
+{
+  "spanish": {
+    "vowels": {
+      "a": { "f1": 750, "f2": 1450, "description": "Open central" },
+      "e": { "f1": 450, "f2": 1900, "description": "Mid-front" },
+      "i": { "f1": 300, "f2": 2300, "description": "Close-front" },
+      "o": { "f1": 500, "f2": 1000, "description": "Mid-back" },
+      "u": { "f1": 350, "f2": 800, "description": "Close-back" }
+    },
+    "plosives": {
+      "p": { "vot_ms": 10, "type": "voiceless", "aspiration": "none" },
+      "t": { "vot_ms": 15, "type": "voiceless", "aspiration": "none" },
+      "k": { "vot_ms": 25, "type": "voiceless", "aspiration": "none" },
+      "b": { "vot_ms": -80, "type": "voiced", "is_approximant": true },
+      "d": { "vot_ms": -75, "type": "voiced", "is_approximant": true },
+      "g": { "vot_ms": -60, "type": "voiced", "is_approximant": true }
+    },
+    "fricatives": {
+      "s": { "centroid_hz": 4500, "bandwidth_hz": 1000 },
+      "f": { "centroid_hz": 3200, "bandwidth_hz": 1500 },
+      "θ": { "centroid_hz": 6000, "bandwidth_hz": 2000 },
+      "x": { "centroid_hz": 2500, "bandwidth_hz": 800 }
+    }
+  }
+}
